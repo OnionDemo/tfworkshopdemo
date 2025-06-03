@@ -2,7 +2,7 @@ provider "aws" {
   region = var.region
   default_tags {
     tags = {
-      Name        = "prakash-test"
+      Name        = "ting-test"
       Environment = var.environment
       Owner       = "TFProviders - test"
       Project     = "Test"
@@ -98,7 +98,7 @@ resource "aws_instance" "web" {
   subnet_id              = aws_subnet.hashi.id
   vpc_security_group_ids = [aws_security_group.hashi.id]
   instance_type          = "t2.small"
-  #key_name               = "Prakash-demo"
+  #key_name               = "ting-demo"
   #associate_public_ip_address  = true
   count                  =  2
 
@@ -112,7 +112,7 @@ resource "aws_instance" "web" {
 
 #module "s3_bucket" {
 #  source = "terraform-aws-modules/s3-bucket/aws"
-#  bucket = "my-s3-bucket-prakash-2021"
+#  bucket = "my-s3-bucket-ting-2025"
 #  acl    = "private"
 #
 #  versioning = {
